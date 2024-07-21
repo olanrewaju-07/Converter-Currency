@@ -1,13 +1,135 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Montserrat", sans-serif;
+}
+body {
+    display: flex;
+  justify-content: center;
+  margin-top: 45px;
+  background: linear-gradient(90deg, rgb(129, 63, 214), rgb(209, 51, 179));
+}
+.currency-converter{
+  background: linear-gradient(90deg, rgba(139, 0, 139, 1), rgba(139, 0, 139, 0.7));
+  padding: 40px 30px 50px;
+  max-width: 600px;
+  border-radius: 10px;
+  border: 2px solid whitesmoke;
+}
+.currency-converter .converter-title {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.converter-form .exchange-change-result{
+  background: rgba(225, 225, 225, 0.15);
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  font-weight: 500;
+  margin-bottom: 20px;
+  border: 2px solid #813fd6;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 1rem;
+}
+.converter-form .form-group{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.form-currency-group{
+ align-items: center;
+ justify-content: center;
+ gap: 30px;
+}
+.form-currency-group .swap-icon{
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: rgba(225, 225, 225, 0.1);
+  border: 1px solid #813fd6;
+  outline: none;
+  height: 40px;
+  width: 40px;
+  transition: 0.2s ease;
+}
+.form-currency-group .swap-icon:hover{
+  background: rgba(225, 225, 225, 0.3);
+}
+.converter-form .form-group .form-label{
+  color: #fff;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+
+}
+.converter-form .form-group .form-input{
+  min-height: 48px;
+  border-radius: 10px;
+  background: rgba(225, 225, 225, 0.1);
+  border: 2px solid #813fd6;
+  outline: none;
+  color: white;
+  padding: 0 15px;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.converter-form .form-currency-group{
+  flex-direction: row;
+    align-items: center;
+ }
+.form-currency-group .currency-select{
+   display: flex;
+   align-items: center;
+   padding: 0 10px;
+   min-height: 45px;
+   border-radius: 10px;
+   background: rgba(225, 225, 225, 0.1);
+   border: 2px solid #813fd6;
+   margin-bottom: 25px;
+}
+.currency-select img {
+  width: 25px;
+}
+.form-currency-group .currency-select .currency-dropdown{
+  outline: none;
+  border: none;
+  padding: 0 10px 0 5px;
+  background: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.form-currency-group .currency-select .currency-dropdown option {
+  color: #000;
+  font-weight: 500;
+}
+.converter-form .submit-button{
+  width: 100%;
+  border-radius: 6px;
+  border: none;
+  min-height: 50px;
+  outline: none;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.converter-form .submit-button .loading{
+  opacity: 0.8;
+  pointer-events: none;
+}
+.converter-form .submit-button:hover {
+  background: rgba(225, 225, 225, 0.3);
+  color: #fff;
 }
